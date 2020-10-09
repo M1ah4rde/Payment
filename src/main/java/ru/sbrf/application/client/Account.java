@@ -2,17 +2,17 @@ package ru.sbrf.application.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.Setter;
+import ru.sbrf.application.common.Currency;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
-@ToString
+@Setter
 
-public class User {
+public class Account {
 
-    private String phoneNumber;
     private String accountNumber;
+    private Currency currency;
+    private float balance;
 
 }
