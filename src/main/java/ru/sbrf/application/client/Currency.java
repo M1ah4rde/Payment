@@ -1,4 +1,4 @@
-package ru.sbrf.application.common;
+package ru.sbrf.application.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,11 +6,12 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 
-public enum StatusPayment {
+public enum Currency {
 
-    successfully(1),
-    waiting(2),
-    fail(3);
+    RUB(810),
+    USD(840),
+    EUR(978);
 
     private final int code;
+
 }

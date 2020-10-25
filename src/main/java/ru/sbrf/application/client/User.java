@@ -12,7 +12,7 @@ import lombok.ToString;
 
 public class User {
 
-    private String phoneNumber;
-    private String accountNumber;
+    private String numberPhone;
+    private String numberAccount;
 
 }

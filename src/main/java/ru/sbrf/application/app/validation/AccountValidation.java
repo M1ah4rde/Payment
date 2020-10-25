@@ -1,7 +1,7 @@
 package ru.sbrf.application.app.validation;
 
 import lombok.AllArgsConstructor;
-import ru.sbrf.application.common.exeptions.AccountValidationException;
+import ru.sbrf.application.app.exeptions.AccountValidationException;
 
 @AllArgsConstructor
 

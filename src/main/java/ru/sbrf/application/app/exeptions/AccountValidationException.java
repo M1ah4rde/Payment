@@ -1,4 +1,4 @@
-package ru.sbrf.application.common.exeptions;
+package ru.sbrf.application.app.exeptions;
 
 public class AccountValidationException extends RuntimeException {
 
@@ -31,4 +31,5 @@ public class AccountValidationException extends RuntimeException {
     public String getAccount() {
         return account;
     }
+
 }

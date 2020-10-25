@@ -20,11 +20,11 @@ class PhoneValidationTest {
 
     @Test
     void checkPrefix() {
-        PhoneValidation phoneValidation = new PhoneValidation("+81234567890");
-        assertThrows(IOError.class, phoneValidation::checkPrefix);
     }
 
     @Test
     void checkLength() {
+        PhoneValidation phoneValidation = new PhoneValidation("+81234567890");
+        assertThrows(IOError.class, phoneValidation::checkLength);
     }
 }

@@ -3,7 +3,6 @@ package ru.sbrf.application.client;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.sbrf.application.common.Currency;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

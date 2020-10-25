@@ -1,15 +1,15 @@
 package ru.sbrf.application.app;
 
 import lombok.Getter;
+import ru.sbrf.application.app.exeptions.AccountValidationException;
+import ru.sbrf.application.app.exeptions.PhoneValidationException;
 import ru.sbrf.application.app.validation.AccountValidation;
 import ru.sbrf.application.app.validation.PhoneValidation;
 import ru.sbrf.application.client.User;
-import ru.sbrf.application.common.exeptions.AccountValidationException;
-import ru.sbrf.application.common.exeptions.PhoneValidationException;
 
 @Getter
 
-public class WebIApplication implements IApplication {
+public class WebApplication implements Application {
 
     @Override
     public void PhonePayment(User user) throws Exception {
@@ -21,7 +21,7 @@ public class WebIApplication implements IApplication {
         AccountValidation accountValidation = new AccountValidation(account);
 
         try {
-            phoneValidation.checkLength().checkPrefix();
+            phoneValidation.checkLength();
         } catch (PhoneValidationException ex) {
             System.out.println(ex);
             System.out.println(ex.getPhone());

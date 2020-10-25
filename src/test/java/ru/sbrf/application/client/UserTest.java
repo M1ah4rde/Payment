@@ -19,7 +19,7 @@ class UserTest {
     @Test
     void getPhoneNumber() {
         User user = new User("+81234567890", "01234567890123456789");
-        assertEquals("+7", user.getPhoneNumber());
+        assertEquals("+7", user.getNumberPhone());
     }
 
     @Test

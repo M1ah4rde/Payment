@@ -1,34 +1,38 @@
 package ru.sbrf.application.server;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.ToString;
 import ru.sbrf.application.client.User;
 import ru.sbrf.application.common.PhonePayment;
+import ru.sbrf.application.server.base.BaseUsers;
+import ru.sbrf.application.server.base.PaymentHistory;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
+@ToString
 
-public class BankServer implements IServer {
+public class BankServer implements Server {
 
-    private HashMap<String, PhonePayment> payments = new HashMap<String, PhonePayment>(); // список платежей
+    private String ip;
+    private String port;
+    private String protocol;
+    private String server;
 
-    private ArrayList<User> users = new ArrayList<User>(); // список пользователей
+    private List<String> listPayment = new ArrayList<String>();
+    private BaseUsers baseUsers = new BaseUsers();
+    private PaymentHistory PaymentHistory = new PaymentHistory();
+
+    public BankServer(String ip, String port, String protocol, String server) {
+        this.ip = ip;
+        this.port = port;
+        this.protocol = protocol;
+        this.server = server;
+    }
 
     @Override
-    public void phonePayment(PhonePayment phonePayment) {
+    public void makePaymentPhone(PhonePayment phonePayment, User user, User client) {
 
-        if (payments.containsKey(phonePayment.getId())) { // проверка на повтор по номеру (id)
-            System.out.println("Повтор платежа");
-            return;
-        }
-
-        payments.put(phonePayment.getId(), phonePayment); // добавляем пользователя в список по номеру (id)
     }
 }
-
-

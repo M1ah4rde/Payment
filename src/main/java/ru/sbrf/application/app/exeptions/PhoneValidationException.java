@@ -1,4 +1,4 @@
-package ru.sbrf.application.common.exeptions;
+package ru.sbrf.application.app.exeptions;
 
 public class PhoneValidationException extends RuntimeException {
 

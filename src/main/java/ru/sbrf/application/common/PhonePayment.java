@@ -3,6 +3,7 @@ package ru.sbrf.application.common;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
+import ru.sbrf.application.client.Currency;
 import ru.sbrf.application.client.User;
 
 @AllArgsConstructor
